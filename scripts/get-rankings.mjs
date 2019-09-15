@@ -29,5 +29,5 @@ const fetchTable = async (url, output, pickResult = ([i]) => i) => {
   console.log('Done!')
 }
 
-fetchTable('https://www.numbeo.com/cost-of-living/rankings.jsp', 'city-rankings.json', ([, , i]) => i)
-fetchTable('https://www.worlddata.info/cost-of-living.php', 'country-rankings.json')
+fetchTable('https://www.numbeo.com/cost-of-living/rankings.jsp', 'data/city-rankings.json', ([, , i]) => i)
+fetchTable('https://www.numbeo.com/cost-of-living/rankings_by_country.jsp', 'data/country-rankings.json', ([, , i]) => i)
