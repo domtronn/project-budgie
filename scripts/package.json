@@ -4,11 +4,13 @@
   "description": "Just scripts to run to generate data and try things out",
   "main": "get-rankings.js",
   "scripts": {
-    "get-rankings": "node --experimental-modules get-rankings.mjs"
+    "get-rankings": "node --experimental-modules get-rankings.mjs",
+    "mod": "node --experimental-modules"
   },
   "author": "Dom Charlseworth <dominic.charlesworth@uswitch.com>",
   "license": "MIT",
   "dependencies": {
+    "cli-table": "^0.3.1",
     "ramda": "^0.26.1",
     "tabletojson": "^1.0.4"
   }
