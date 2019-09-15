@@ -5,6 +5,8 @@ import { keysToKebabCase } from './utils'
 
 const tabletojson = (url) => new Promise((resolve) => t2json.convertUrl(url, (res) => resolve(res)))
 const enrichLocation = ({ city, ...rest }) => {
+  if (!city) return { city, ...rest }
+
   let [ c, state, country ] = city.split(',')
   return {
     ...rest,
@@ -14,13 +16,18 @@ const enrichLocation = ({ city, ...rest }) => {
   }
 }
 
-;(async () => {
-  const [, , result] = await tabletojson('https://www.numbeo.com/cost-of-living/rankings.jsp')
+const fetchTable = async (url, output, pickResult = ([i]) => i) => {
+  const results = await tabletojson(url)
+  const result = pickResult(results)
+
   const processed = map(compose(
     enrichLocation,
     keysToKebabCase
   ), result)
 
-  await fs.writeFile('output.json', JSON.stringify(processed, null, 2))
+  await fs.writeFile(output, JSON.stringify(processed, null, 2))
   console.log('Done!')
-})()
+}
+
+fetchTable('https://www.numbeo.com/cost-of-living/rankings.jsp', 'city-rankings.json', ([, , i]) => i)
+fetchTable('https://www.worlddata.info/cost-of-living.php', 'country-rankings.json')
