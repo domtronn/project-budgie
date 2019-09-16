@@ -1,5 +1,6 @@
-import data from '../data/city-rankings.json'
+import data from '../data/country-rankings.json'
 import service from './.key.json'
+
 
 import { chunkChain } from './utils'
 import { toKebabCase } from '../s'
@@ -12,7 +13,6 @@ admin.initializeApp({
   databaseURL: 'https://project-budgie.firebaseio.com'
 })
 
-const toid = (a, b) => `${toKebabCase(a)}-${toKebabCase(b)}`
 const toi = compose(
   map(Number),
   pick(
@@ -29,11 +29,10 @@ const colRef = admin
   .collection('locations')
 
 const mData = data
-  .map(({ country, city, ...rest }) => ({
-    city,
+  .map(({ country, ...rest }) => ({
     country,
-    type: 'city',
-    id: toid(country, city),
+    type: 'country',
+    id: toKebabCase(country),
     i: toi(rest)
   }))
 
