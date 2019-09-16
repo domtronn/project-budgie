@@ -31,3 +31,4 @@ const fetchTable = async (url, output, pickResult = ([i]) => i) => {
 
 fetchTable('https://www.numbeo.com/cost-of-living/rankings.jsp', 'data/city-rankings.json', ([, , i]) => i)
 fetchTable('https://www.numbeo.com/cost-of-living/rankings_by_country.jsp', 'data/country-rankings.json', ([, , i]) => i)
+fetchTable('https://developers.google.com/public-data/docs/canonical/countries_csv', 'data/countries.json')
