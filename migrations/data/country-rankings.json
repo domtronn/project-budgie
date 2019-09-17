@@ -1,0 +1,1362 @@
+[
+  {
+    "rank": "",
+    "country": "Cayman Islands",
+    "cost-of-living-index": "141.64",
+    "rent-index": "74.40",
+    "cost-of-living-plus-rent-index": "109.49",
+    "groceries-index": "157.93",
+    "restaurant-price-index": "105.03",
+    "local-purchasing-power-index": "137.88"
+  },
+  {
+    "rank": "",
+    "country": "Bermuda",
+    "cost-of-living-index": "138.22",
+    "rent-index": "87.62",
+    "cost-of-living-plus-rent-index": "114.03",
+    "groceries-index": "124.87",
+    "restaurant-price-index": "150.40",
+    "local-purchasing-power-index": "79.87"
+  },
+  {
+    "rank": "",
+    "country": "Switzerland",
+    "cost-of-living-index": "122.67",
+    "rent-index": "50.22",
+    "cost-of-living-plus-rent-index": "88.03",
+    "groceries-index": "121.29",
+    "restaurant-price-index": "124.04",
+    "local-purchasing-power-index": "127.76"
+  },
+  {
+    "rank": "",
+    "country": "Norway",
+    "cost-of-living-index": "104.49",
+    "rent-index": "37.26",
+    "cost-of-living-plus-rent-index": "72.34",
+    "groceries-index": "93.94",
+    "restaurant-price-index": "115.59",
+    "local-purchasing-power-index": "98.00"
+  },
+  {
+    "rank": "",
+    "country": "Us Virgin Islands",
+    "cost-of-living-index": "97.23",
+    "rent-index": "48.24",
+    "cost-of-living-plus-rent-index": "73.81",
+    "groceries-index": "87.42",
+    "restaurant-price-index": "90.74",
+    "local-purchasing-power-index": "54.58"
+  },
+  {
+    "rank": "",
+    "country": "Iceland",
+    "cost-of-living-index": "97.22",
+    "rent-index": "45.08",
+    "cost-of-living-plus-rent-index": "72.29",
+    "groceries-index": "84.63",
+    "restaurant-price-index": "111.46",
+    "local-purchasing-power-index": "92.03"
+  },
+  {
+    "rank": "",
+    "country": "Bahamas",
+    "cost-of-living-index": "85.96",
+    "rent-index": "35.40",
+    "cost-of-living-plus-rent-index": "61.79",
+    "groceries-index": "68.84",
+    "restaurant-price-index": "87.20",
+    "local-purchasing-power-index": "56.21"
+  },
+  {
+    "rank": "",
+    "country": "Japan",
+    "cost-of-living-index": "85.52",
+    "rent-index": "28.08",
+    "cost-of-living-plus-rent-index": "58.06",
+    "groceries-index": "84.69",
+    "restaurant-price-index": "50.05",
+    "local-purchasing-power-index": "97.57"
+  },
+  {
+    "rank": "",
+    "country": "Luxembourg",
+    "cost-of-living-index": "84.68",
+    "rent-index": "55.44",
+    "cost-of-living-plus-rent-index": "70.70",
+    "groceries-index": "71.60",
+    "restaurant-price-index": "92.91",
+    "local-purchasing-power-index": "107.89"
+  },
+  {
+    "rank": "",
+    "country": "Denmark",
+    "cost-of-living-index": "83.88",
+    "rent-index": "33.73",
+    "cost-of-living-plus-rent-index": "59.90",
+    "groceries-index": "64.02",
+    "restaurant-price-index": "100.63",
+    "local-purchasing-power-index": "110.69"
+  },
+  {
+    "rank": "",
+    "country": "Barbados",
+    "cost-of-living-index": "80.32",
+    "rent-index": "20.00",
+    "cost-of-living-plus-rent-index": "51.48",
+    "groceries-index": "72.75",
+    "restaurant-price-index": "72.61",
+    "local-purchasing-power-index": "56.97"
+  },
+  {
+    "rank": "",
+    "country": "Singapore",
+    "cost-of-living-index": "80.23",
+    "rent-index": "61.99",
+    "cost-of-living-plus-rent-index": "71.51",
+    "groceries-index": "68.28",
+    "restaurant-price-index": "55.41",
+    "local-purchasing-power-index": "88.84"
+  },
+  {
+    "rank": "",
+    "country": "Israel",
+    "cost-of-living-index": "79.54",
+    "rent-index": "31.49",
+    "cost-of-living-plus-rent-index": "56.56",
+    "groceries-index": "64.86",
+    "restaurant-price-index": "88.75",
+    "local-purchasing-power-index": "85.96"
+  },
+  {
+    "rank": "",
+    "country": "Hong Kong",
+    "cost-of-living-index": "79.21",
+    "rent-index": "79.72",
+    "cost-of-living-plus-rent-index": "79.46",
+    "groceries-index": "79.40",
+    "restaurant-price-index": "55.62",
+    "local-purchasing-power-index": "66.79"
+  },
+  {
+    "rank": "",
+    "country": "Ireland",
+    "cost-of-living-index": "76.33",
+    "rent-index": "43.94",
+    "cost-of-living-plus-rent-index": "60.85",
+    "groceries-index": "58.83",
+    "restaurant-price-index": "84.08",
+    "local-purchasing-power-index": "90.80"
+  },
+  {
+    "rank": "",
+    "country": "Netherlands",
+    "cost-of-living-index": "75.22",
+    "rent-index": "35.29",
+    "cost-of-living-plus-rent-index": "56.13",
+    "groceries-index": "58.10",
+    "restaurant-price-index": "82.90",
+    "local-purchasing-power-index": "98.04"
+  },
+  {
+    "rank": "",
+    "country": "South Korea",
+    "cost-of-living-index": "75.16",
+    "rent-index": "20.87",
+    "cost-of-living-plus-rent-index": "49.20",
+    "groceries-index": "87.23",
+    "restaurant-price-index": "43.27",
+    "local-purchasing-power-index": "99.13"
+  },
+  {
+    "rank": "",
+    "country": "France",
+    "cost-of-living-index": "74.62",
+    "rent-index": "26.10",
+    "cost-of-living-plus-rent-index": "51.42",
+    "groceries-index": "67.42",
+    "restaurant-price-index": "75.09",
+    "local-purchasing-power-index": "87.70"
+  },
+  {
+    "rank": "",
+    "country": "Australia",
+    "cost-of-living-index": "73.39",
+    "rent-index": "35.35",
+    "cost-of-living-plus-rent-index": "55.20",
+    "groceries-index": "67.38",
+    "restaurant-price-index": "72.23",
+    "local-purchasing-power-index": "118.09"
+  },
+  {
+    "rank": "",
+    "country": "Belgium",
+    "cost-of-living-index": "73.13",
+    "rent-index": "26.05",
+    "cost-of-living-plus-rent-index": "50.62",
+    "groceries-index": "60.46",
+    "restaurant-price-index": "82.53",
+    "local-purchasing-power-index": "93.17"
+  },
+  {
+    "rank": "",
+    "country": "New Zealand",
+    "cost-of-living-index": "73.01",
+    "rent-index": "31.44",
+    "cost-of-living-plus-rent-index": "53.13",
+    "groceries-index": "65.05",
+    "restaurant-price-index": "69.93",
+    "local-purchasing-power-index": "97.59"
+  },
+  {
+    "rank": "",
+    "country": "Seychelles",
+    "cost-of-living-index": "72.75",
+    "rent-index": "32.79",
+    "cost-of-living-plus-rent-index": "53.64",
+    "groceries-index": "65.46",
+    "restaurant-price-index": "87.37",
+    "local-purchasing-power-index": "21.52"
+  },
+  {
+    "rank": "",
+    "country": "Finland",
+    "cost-of-living-index": "72.18",
+    "rent-index": "26.31",
+    "cost-of-living-plus-rent-index": "50.25",
+    "groceries-index": "58.18",
+    "restaurant-price-index": "79.39",
+    "local-purchasing-power-index": "108.78"
+  },
+  {
+    "rank": "",
+    "country": "Austria",
+    "cost-of-living-index": "72.15",
+    "rent-index": "27.84",
+    "cost-of-living-plus-rent-index": "50.96",
+    "groceries-index": "64.81",
+    "restaurant-price-index": "71.81",
+    "local-purchasing-power-index": "89.88"
+  },
+  {
+    "rank": "",
+    "country": "United States",
+    "cost-of-living-index": "70.95",
+    "rent-index": "40.50",
+    "cost-of-living-plus-rent-index": "56.39",
+    "groceries-index": "67.10",
+    "restaurant-price-index": "70.76",
+    "local-purchasing-power-index": "119.10"
+  },
+  {
+    "rank": "",
+    "country": "Sweden",
+    "cost-of-living-index": "70.11",
+    "rent-index": "25.65",
+    "cost-of-living-plus-rent-index": "48.85",
+    "groceries-index": "61.18",
+    "restaurant-price-index": "72.14",
+    "local-purchasing-power-index": "112.75"
+  },
+  {
+    "rank": "",
+    "country": "Italy",
+    "cost-of-living-index": "69.02",
+    "rent-index": "21.60",
+    "cost-of-living-plus-rent-index": "46.35",
+    "groceries-index": "57.45",
+    "restaurant-price-index": "74.72",
+    "local-purchasing-power-index": "73.43"
+  },
+  {
+    "rank": "",
+    "country": "Canada",
+    "cost-of-living-index": "68.16",
+    "rent-index": "30.28",
+    "cost-of-living-plus-rent-index": "50.04",
+    "groceries-index": "64.99",
+    "restaurant-price-index": "63.25",
+    "local-purchasing-power-index": "105.01"
+  },
+  {
+    "rank": "",
+    "country": "Puerto Rico",
+    "cost-of-living-index": "66.81",
+    "rent-index": "18.46",
+    "cost-of-living-plus-rent-index": "43.70",
+    "groceries-index": "65.80",
+    "restaurant-price-index": "54.64",
+    "local-purchasing-power-index": "93.03"
+  },
+  {
+    "rank": "",
+    "country": "Germany",
+    "cost-of-living-index": "66.57",
+    "rent-index": "27.02",
+    "cost-of-living-plus-rent-index": "47.66",
+    "groceries-index": "51.21",
+    "restaurant-price-index": "63.38",
+    "local-purchasing-power-index": "111.99"
+  },
+  {
+    "rank": "",
+    "country": "Malta",
+    "cost-of-living-index": "65.43",
+    "rent-index": "30.14",
+    "cost-of-living-plus-rent-index": "48.55",
+    "groceries-index": "51.11",
+    "restaurant-price-index": "73.53",
+    "local-purchasing-power-index": "55.34"
+  },
+  {
+    "rank": "",
+    "country": "United Kingdom",
+    "cost-of-living-index": "65.33",
+    "rent-index": "28.69",
+    "cost-of-living-plus-rent-index": "47.81",
+    "groceries-index": "50.44",
+    "restaurant-price-index": "72.54",
+    "local-purchasing-power-index": "100.46"
+  },
+  {
+    "rank": "",
+    "country": "United Arab Emirates",
+    "cost-of-living-index": "63.58",
+    "rent-index": "45.04",
+    "cost-of-living-plus-rent-index": "54.71",
+    "groceries-index": "50.68",
+    "restaurant-price-index": "62.17",
+    "local-purchasing-power-index": "100.53"
+  },
+  {
+    "rank": "",
+    "country": "Qatar",
+    "cost-of-living-index": "62.22",
+    "rent-index": "51.18",
+    "cost-of-living-plus-rent-index": "56.94",
+    "groceries-index": "52.60",
+    "restaurant-price-index": "63.93",
+    "local-purchasing-power-index": "119.33"
+  },
+  {
+    "rank": "",
+    "country": "Libya",
+    "cost-of-living-index": "61.25",
+    "rent-index": "15.15",
+    "cost-of-living-plus-rent-index": "39.21",
+    "groceries-index": "72.77",
+    "restaurant-price-index": "38.11",
+    "local-purchasing-power-index": "55.97"
+  },
+  {
+    "rank": "",
+    "country": "Lebanon",
+    "cost-of-living-index": "59.74",
+    "rent-index": "26.20",
+    "cost-of-living-plus-rent-index": "43.70",
+    "groceries-index": "44.09",
+    "restaurant-price-index": "58.13",
+    "local-purchasing-power-index": "50.70"
+  },
+  {
+    "rank": "",
+    "country": "Taiwan",
+    "cost-of-living-index": "58.77",
+    "rent-index": "15.45",
+    "cost-of-living-plus-rent-index": "38.06",
+    "groceries-index": "67.88",
+    "restaurant-price-index": "26.95",
+    "local-purchasing-power-index": "74.16"
+  },
+  {
+    "rank": "",
+    "country": "Cyprus",
+    "cost-of-living-index": "58.39",
+    "rent-index": "20.72",
+    "cost-of-living-plus-rent-index": "40.38",
+    "groceries-index": "45.01",
+    "restaurant-price-index": "63.14",
+    "local-purchasing-power-index": "67.28"
+  },
+  {
+    "rank": "",
+    "country": "Bahrain",
+    "cost-of-living-index": "58.36",
+    "rent-index": "31.22",
+    "cost-of-living-plus-rent-index": "45.38",
+    "groceries-index": "49.52",
+    "restaurant-price-index": "52.53",
+    "local-purchasing-power-index": "63.84"
+  },
+  {
+    "rank": "",
+    "country": "Greece",
+    "cost-of-living-index": "56.72",
+    "rent-index": "11.47",
+    "cost-of-living-plus-rent-index": "35.09",
+    "groceries-index": "42.78",
+    "restaurant-price-index": "55.42",
+    "local-purchasing-power-index": "48.46"
+  },
+  {
+    "rank": "",
+    "country": "Jamaica",
+    "cost-of-living-index": "56.44",
+    "rent-index": "14.76",
+    "cost-of-living-plus-rent-index": "36.51",
+    "groceries-index": "55.76",
+    "restaurant-price-index": "39.88",
+    "local-purchasing-power-index": "35.39"
+  },
+  {
+    "rank": "",
+    "country": "Ethiopia",
+    "cost-of-living-index": "55.52",
+    "rent-index": "26.31",
+    "cost-of-living-plus-rent-index": "41.55",
+    "groceries-index": "35.81",
+    "restaurant-price-index": "20.28",
+    "local-purchasing-power-index": "9.46"
+  },
+  {
+    "rank": "",
+    "country": "Jordan",
+    "cost-of-living-index": "55.36",
+    "rent-index": "11.88",
+    "cost-of-living-plus-rent-index": "34.57",
+    "groceries-index": "43.45",
+    "restaurant-price-index": "49.70",
+    "local-purchasing-power-index": "37.34"
+  },
+  {
+    "rank": "",
+    "country": "Costa Rica",
+    "cost-of-living-index": "55.09",
+    "rent-index": "16.23",
+    "cost-of-living-plus-rent-index": "36.51",
+    "groceries-index": "49.74",
+    "restaurant-price-index": "45.70",
+    "local-purchasing-power-index": "46.02"
+  },
+  {
+    "rank": "",
+    "country": "Uruguay",
+    "cost-of-living-index": "54.91",
+    "rent-index": "15.46",
+    "cost-of-living-plus-rent-index": "36.05",
+    "groceries-index": "43.15",
+    "restaurant-price-index": "53.64",
+    "local-purchasing-power-index": "39.82"
+  },
+  {
+    "rank": "",
+    "country": "Spain",
+    "cost-of-living-index": "54.74",
+    "rent-index": "21.53",
+    "cost-of-living-plus-rent-index": "38.86",
+    "groceries-index": "43.25",
+    "restaurant-price-index": "53.74",
+    "local-purchasing-power-index": "79.81"
+  },
+  {
+    "rank": "",
+    "country": "Zimbabwe",
+    "cost-of-living-index": "54.72",
+    "rent-index": "11.51",
+    "cost-of-living-plus-rent-index": "34.06",
+    "groceries-index": "49.94",
+    "restaurant-price-index": "39.57",
+    "local-purchasing-power-index": "28.66"
+  },
+  {
+    "rank": "",
+    "country": "Trinidad And Tobago",
+    "cost-of-living-index": "54.17",
+    "rent-index": "16.50",
+    "cost-of-living-plus-rent-index": "36.16",
+    "groceries-index": "49.87",
+    "restaurant-price-index": "48.90",
+    "local-purchasing-power-index": "52.83"
+  },
+  {
+    "rank": "",
+    "country": "Slovenia",
+    "cost-of-living-index": "54.17",
+    "rent-index": "15.81",
+    "cost-of-living-plus-rent-index": "35.83",
+    "groceries-index": "44.50",
+    "restaurant-price-index": "45.59",
+    "local-purchasing-power-index": "68.24"
+  },
+  {
+    "rank": "",
+    "country": "Palestinian Territory",
+    "cost-of-living-index": "52.99",
+    "rent-index": "9.25",
+    "cost-of-living-plus-rent-index": "32.07",
+    "groceries-index": "46.05",
+    "restaurant-price-index": "38.44",
+    "local-purchasing-power-index": "52.82"
+  },
+  {
+    "rank": "",
+    "country": "Panama",
+    "cost-of-living-index": "52.98",
+    "rent-index": "24.42",
+    "cost-of-living-plus-rent-index": "39.33",
+    "groceries-index": "50.27",
+    "restaurant-price-index": "47.41",
+    "local-purchasing-power-index": "38.96"
+  },
+  {
+    "rank": "",
+    "country": "Mauritius",
+    "cost-of-living-index": "51.60",
+    "rent-index": "11.30",
+    "cost-of-living-plus-rent-index": "32.33",
+    "groceries-index": "46.06",
+    "restaurant-price-index": "40.27",
+    "local-purchasing-power-index": "36.76"
+  },
+  {
+    "rank": "",
+    "country": "Estonia",
+    "cost-of-living-index": "50.99",
+    "rent-index": "15.63",
+    "cost-of-living-plus-rent-index": "34.08",
+    "groceries-index": "36.22",
+    "restaurant-price-index": "53.06",
+    "local-purchasing-power-index": "76.75"
+  },
+  {
+    "rank": "",
+    "country": "Portugal",
+    "cost-of-living-index": "50.77",
+    "rent-index": "21.76",
+    "cost-of-living-plus-rent-index": "36.90",
+    "groceries-index": "39.90",
+    "restaurant-price-index": "43.85",
+    "local-purchasing-power-index": "53.61"
+  },
+  {
+    "rank": "",
+    "country": "Kuwait",
+    "cost-of-living-index": "50.33",
+    "rent-index": "32.98",
+    "cost-of-living-plus-rent-index": "42.03",
+    "groceries-index": "36.73",
+    "restaurant-price-index": "48.05",
+    "local-purchasing-power-index": "98.33"
+  },
+  {
+    "rank": "",
+    "country": "Croatia",
+    "cost-of-living-index": "50.05",
+    "rent-index": "12.71",
+    "cost-of-living-plus-rent-index": "32.19",
+    "groceries-index": "40.52",
+    "restaurant-price-index": "42.07",
+    "local-purchasing-power-index": "57.23"
+  },
+  {
+    "rank": "",
+    "country": "Thailand",
+    "cost-of-living-index": "49.86",
+    "rent-index": "17.13",
+    "cost-of-living-plus-rent-index": "34.21",
+    "groceries-index": "50.08",
+    "restaurant-price-index": "24.83",
+    "local-purchasing-power-index": "39.87"
+  },
+  {
+    "rank": "",
+    "country": "Fiji",
+    "cost-of-living-index": "49.67",
+    "rent-index": "19.79",
+    "cost-of-living-plus-rent-index": "35.38",
+    "groceries-index": "54.90",
+    "restaurant-price-index": "36.71",
+    "local-purchasing-power-index": "33.13"
+  },
+  {
+    "rank": "",
+    "country": "Latvia",
+    "cost-of-living-index": "49.55",
+    "rent-index": "12.04",
+    "cost-of-living-plus-rent-index": "31.62",
+    "groceries-index": "35.72",
+    "restaurant-price-index": "47.73",
+    "local-purchasing-power-index": "56.55"
+  },
+  {
+    "rank": "",
+    "country": "Chile",
+    "cost-of-living-index": "49.15",
+    "rent-index": "15.54",
+    "cost-of-living-plus-rent-index": "33.08",
+    "groceries-index": "41.26",
+    "restaurant-price-index": "46.84",
+    "local-purchasing-power-index": "51.43"
+  },
+  {
+    "rank": "",
+    "country": "Belize",
+    "cost-of-living-index": "49.06",
+    "rent-index": "10.62",
+    "cost-of-living-plus-rent-index": "30.68",
+    "groceries-index": "40.63",
+    "restaurant-price-index": "39.47",
+    "local-purchasing-power-index": "71.16"
+  },
+  {
+    "rank": "",
+    "country": "Saudi Arabia",
+    "cost-of-living-index": "48.71",
+    "rent-index": "11.55",
+    "cost-of-living-plus-rent-index": "30.94",
+    "groceries-index": "37.98",
+    "restaurant-price-index": "34.17",
+    "local-purchasing-power-index": "110.93"
+  },
+  {
+    "rank": "",
+    "country": "Oman",
+    "cost-of-living-index": "48.55",
+    "rent-index": "19.40",
+    "cost-of-living-plus-rent-index": "34.61",
+    "groceries-index": "40.85",
+    "restaurant-price-index": "47.06",
+    "local-purchasing-power-index": "83.09"
+  },
+  {
+    "rank": "",
+    "country": "Myanmar",
+    "cost-of-living-index": "48.06",
+    "rent-index": "22.96",
+    "cost-of-living-plus-rent-index": "36.06",
+    "groceries-index": "52.60",
+    "restaurant-price-index": "22.19",
+    "local-purchasing-power-index": "12.68"
+  },
+  {
+    "rank": "",
+    "country": "Cambodia",
+    "cost-of-living-index": "47.82",
+    "rent-index": "15.13",
+    "cost-of-living-plus-rent-index": "32.19",
+    "groceries-index": "43.90",
+    "restaurant-price-index": "25.43",
+    "local-purchasing-power-index": "11.79"
+  },
+  {
+    "rank": "",
+    "country": "El Salvador",
+    "cost-of-living-index": "47.69",
+    "rent-index": "15.61",
+    "cost-of-living-plus-rent-index": "32.36",
+    "groceries-index": "46.27",
+    "restaurant-price-index": "36.29",
+    "local-purchasing-power-index": "28.56"
+  },
+  {
+    "rank": "",
+    "country": "Dominican Republic",
+    "cost-of-living-index": "46.17",
+    "rent-index": "10.59",
+    "cost-of-living-plus-rent-index": "29.16",
+    "groceries-index": "36.37",
+    "restaurant-price-index": "42.21",
+    "local-purchasing-power-index": "25.18"
+  },
+  {
+    "rank": "",
+    "country": "Nicaragua",
+    "cost-of-living-index": "45.87",
+    "rent-index": "8.91",
+    "cost-of-living-plus-rent-index": "28.20",
+    "groceries-index": "43.69",
+    "restaurant-price-index": "31.56",
+    "local-purchasing-power-index": "24.43"
+  },
+  {
+    "rank": "",
+    "country": "Czech Republic",
+    "cost-of-living-index": "45.70",
+    "rent-index": "19.37",
+    "cost-of-living-plus-rent-index": "33.11",
+    "groceries-index": "37.89",
+    "restaurant-price-index": "33.78",
+    "local-purchasing-power-index": "71.19"
+  },
+  {
+    "rank": "",
+    "country": "Lithuania",
+    "cost-of-living-index": "45.41",
+    "rent-index": "12.80",
+    "cost-of-living-plus-rent-index": "29.82",
+    "groceries-index": "35.14",
+    "restaurant-price-index": "43.77",
+    "local-purchasing-power-index": "60.44"
+  },
+  {
+    "rank": "",
+    "country": "Mozambique",
+    "cost-of-living-index": "44.65",
+    "rent-index": "19.94",
+    "cost-of-living-plus-rent-index": "32.84",
+    "groceries-index": "33.48",
+    "restaurant-price-index": "38.38",
+    "local-purchasing-power-index": "25.49"
+  },
+  {
+    "rank": "",
+    "country": "Slovakia",
+    "cost-of-living-index": "44.65",
+    "rent-index": "15.86",
+    "cost-of-living-plus-rent-index": "30.88",
+    "groceries-index": "37.68",
+    "restaurant-price-index": "33.94",
+    "local-purchasing-power-index": "61.83"
+  },
+  {
+    "rank": "",
+    "country": "Brunei",
+    "cost-of-living-index": "44.33",
+    "rent-index": "23.29",
+    "cost-of-living-plus-rent-index": "34.27",
+    "groceries-index": "37.70",
+    "restaurant-price-index": "35.08",
+    "local-purchasing-power-index": "94.26"
+  },
+  {
+    "rank": "",
+    "country": "Namibia",
+    "cost-of-living-index": "44.10",
+    "rent-index": "16.87",
+    "cost-of-living-plus-rent-index": "31.08",
+    "groceries-index": "38.92",
+    "restaurant-price-index": "41.18",
+    "local-purchasing-power-index": "60.16"
+  },
+  {
+    "rank": "",
+    "country": "South Africa",
+    "cost-of-living-index": "43.74",
+    "rent-index": "17.24",
+    "cost-of-living-plus-rent-index": "31.07",
+    "groceries-index": "34.36",
+    "restaurant-price-index": "41.75",
+    "local-purchasing-power-index": "81.30"
+  },
+  {
+    "rank": "",
+    "country": "Ghana",
+    "cost-of-living-index": "43.11",
+    "rent-index": "26.61",
+    "cost-of-living-plus-rent-index": "35.22",
+    "groceries-index": "38.33",
+    "restaurant-price-index": "27.80",
+    "local-purchasing-power-index": "20.69"
+  },
+  {
+    "rank": "",
+    "country": "Guatemala",
+    "cost-of-living-index": "43.04",
+    "rent-index": "14.77",
+    "cost-of-living-plus-rent-index": "29.53",
+    "groceries-index": "37.69",
+    "restaurant-price-index": "33.70",
+    "local-purchasing-power-index": "41.47"
+  },
+  {
+    "rank": "",
+    "country": "Brazil",
+    "cost-of-living-index": "42.64",
+    "rent-index": "10.92",
+    "cost-of-living-plus-rent-index": "27.48",
+    "groceries-index": "30.70",
+    "restaurant-price-index": "34.22",
+    "local-purchasing-power-index": "36.31"
+  },
+  {
+    "rank": "",
+    "country": "Honduras",
+    "cost-of-living-index": "42.34",
+    "rent-index": "10.97",
+    "cost-of-living-plus-rent-index": "27.34",
+    "groceries-index": "33.02",
+    "restaurant-price-index": "31.64",
+    "local-purchasing-power-index": "35.52"
+  },
+  {
+    "rank": "",
+    "country": "Ecuador",
+    "cost-of-living-index": "41.99",
+    "rent-index": "11.83",
+    "cost-of-living-plus-rent-index": "27.57",
+    "groceries-index": "36.48",
+    "restaurant-price-index": "31.49",
+    "local-purchasing-power-index": "40.84"
+  },
+  {
+    "rank": "",
+    "country": "Cuba",
+    "cost-of-living-index": "41.73",
+    "rent-index": "6.31",
+    "cost-of-living-plus-rent-index": "24.79",
+    "groceries-index": "36.25",
+    "restaurant-price-index": "29.71",
+    "local-purchasing-power-index": "2.67"
+  },
+  {
+    "rank": "",
+    "country": "Hungary",
+    "cost-of-living-index": "41.70",
+    "rent-index": "13.84",
+    "cost-of-living-plus-rent-index": "28.38",
+    "groceries-index": "31.88",
+    "restaurant-price-index": "34.20",
+    "local-purchasing-power-index": "53.78"
+  },
+  {
+    "rank": "",
+    "country": "Iran",
+    "cost-of-living-index": "41.39",
+    "rent-index": "14.29",
+    "cost-of-living-plus-rent-index": "28.43",
+    "groceries-index": "40.11",
+    "restaurant-price-index": "25.54",
+    "local-purchasing-power-index": "25.95"
+  },
+  {
+    "rank": "",
+    "country": "China",
+    "cost-of-living-index": "40.54",
+    "rent-index": "17.19",
+    "cost-of-living-plus-rent-index": "29.37",
+    "groceries-index": "41.03",
+    "restaurant-price-index": "29.68",
+    "local-purchasing-power-index": "63.93"
+  },
+  {
+    "rank": "",
+    "country": "Iraq",
+    "cost-of-living-index": "39.84",
+    "rent-index": "11.11",
+    "cost-of-living-plus-rent-index": "26.10",
+    "groceries-index": "32.70",
+    "restaurant-price-index": "33.92",
+    "local-purchasing-power-index": "46.41"
+  },
+  {
+    "rank": "",
+    "country": "Suriname",
+    "cost-of-living-index": "39.58",
+    "rent-index": "8.19",
+    "cost-of-living-plus-rent-index": "24.57",
+    "groceries-index": "44.06",
+    "restaurant-price-index": "33.36",
+    "local-purchasing-power-index": "24.76"
+  },
+  {
+    "rank": "",
+    "country": "Malaysia",
+    "cost-of-living-index": "39.46",
+    "rent-index": "10.65",
+    "cost-of-living-plus-rent-index": "25.68",
+    "groceries-index": "38.60",
+    "restaurant-price-index": "22.97",
+    "local-purchasing-power-index": "70.35"
+  },
+  {
+    "rank": "",
+    "country": "Poland",
+    "cost-of-living-index": "39.38",
+    "rent-index": "15.29",
+    "cost-of-living-plus-rent-index": "27.86",
+    "groceries-index": "30.36",
+    "restaurant-price-index": "32.89",
+    "local-purchasing-power-index": "66.06"
+  },
+  {
+    "rank": "",
+    "country": "Botswana",
+    "cost-of-living-index": "39.37",
+    "rent-index": "11.43",
+    "cost-of-living-plus-rent-index": "26.01",
+    "groceries-index": "33.28",
+    "restaurant-price-index": "42.56",
+    "local-purchasing-power-index": "67.57"
+  },
+  {
+    "rank": "",
+    "country": "Montenegro",
+    "cost-of-living-index": "39.37",
+    "rent-index": "10.30",
+    "cost-of-living-plus-rent-index": "25.47",
+    "groceries-index": "30.00",
+    "restaurant-price-index": "34.17",
+    "local-purchasing-power-index": "42.19"
+  },
+  {
+    "rank": "",
+    "country": "Kenya",
+    "cost-of-living-index": "39.26",
+    "rent-index": "11.20",
+    "cost-of-living-plus-rent-index": "25.84",
+    "groceries-index": "33.86",
+    "restaurant-price-index": "32.35",
+    "local-purchasing-power-index": "29.34"
+  },
+  {
+    "rank": "",
+    "country": "Peru",
+    "cost-of-living-index": "38.82",
+    "rent-index": "12.41",
+    "cost-of-living-plus-rent-index": "26.19",
+    "groceries-index": "33.20",
+    "restaurant-price-index": "26.32",
+    "local-purchasing-power-index": "37.42"
+  },
+  {
+    "rank": "",
+    "country": "Argentina",
+    "cost-of-living-index": "38.72",
+    "rent-index": "10.38",
+    "cost-of-living-plus-rent-index": "25.17",
+    "groceries-index": "31.32",
+    "restaurant-price-index": "36.43",
+    "local-purchasing-power-index": "52.01"
+  },
+  {
+    "rank": "",
+    "country": "Russia",
+    "cost-of-living-index": "38.59",
+    "rent-index": "12.00",
+    "cost-of-living-plus-rent-index": "25.88",
+    "groceries-index": "30.79",
+    "restaurant-price-index": "39.32",
+    "local-purchasing-power-index": "43.69"
+  },
+  {
+    "rank": "",
+    "country": "Vietnam",
+    "cost-of-living-index": "38.17",
+    "rent-index": "13.34",
+    "cost-of-living-plus-rent-index": "26.30",
+    "groceries-index": "36.97",
+    "restaurant-price-index": "19.98",
+    "local-purchasing-power-index": "30.22"
+  },
+  {
+    "rank": "",
+    "country": "Bulgaria",
+    "cost-of-living-index": "37.37",
+    "rent-index": "9.45",
+    "cost-of-living-plus-rent-index": "24.02",
+    "groceries-index": "30.75",
+    "restaurant-price-index": "29.71",
+    "local-purchasing-power-index": "51.00"
+  },
+  {
+    "rank": "",
+    "country": "Philippines",
+    "cost-of-living-index": "36.97",
+    "rent-index": "8.66",
+    "cost-of-living-plus-rent-index": "23.44",
+    "groceries-index": "33.22",
+    "restaurant-price-index": "20.86",
+    "local-purchasing-power-index": "27.21"
+  },
+  {
+    "rank": "",
+    "country": "Indonesia",
+    "cost-of-living-index": "36.86",
+    "rent-index": "9.01",
+    "cost-of-living-plus-rent-index": "23.54",
+    "groceries-index": "37.48",
+    "restaurant-price-index": "18.18",
+    "local-purchasing-power-index": "31.01"
+  },
+  {
+    "rank": "",
+    "country": "Albania",
+    "cost-of-living-index": "36.63",
+    "rent-index": "8.63",
+    "cost-of-living-plus-rent-index": "23.24",
+    "groceries-index": "28.54",
+    "restaurant-price-index": "28.67",
+    "local-purchasing-power-index": "32.19"
+  },
+  {
+    "rank": "",
+    "country": "Serbia",
+    "cost-of-living-index": "36.30",
+    "rent-index": "8.75",
+    "cost-of-living-plus-rent-index": "23.13",
+    "groceries-index": "25.96",
+    "restaurant-price-index": "29.87",
+    "local-purchasing-power-index": "37.94"
+  },
+  {
+    "rank": "",
+    "country": "Bosnia And Herzegovina",
+    "cost-of-living-index": "36.19",
+    "rent-index": "6.59",
+    "cost-of-living-plus-rent-index": "22.04",
+    "groceries-index": "28.66",
+    "restaurant-price-index": "24.78",
+    "local-purchasing-power-index": "46.52"
+  },
+  {
+    "rank": "",
+    "country": "Romania",
+    "cost-of-living-index": "36.07",
+    "rent-index": "10.19",
+    "cost-of-living-plus-rent-index": "23.70",
+    "groceries-index": "29.50",
+    "restaurant-price-index": "31.68",
+    "local-purchasing-power-index": "54.20"
+  },
+  {
+    "rank": "",
+    "country": "Turkey",
+    "cost-of-living-index": "35.66",
+    "rent-index": "7.27",
+    "cost-of-living-plus-rent-index": "22.09",
+    "groceries-index": "30.88",
+    "restaurant-price-index": "25.15",
+    "local-purchasing-power-index": "44.44"
+  },
+  {
+    "rank": "",
+    "country": "Zambia",
+    "cost-of-living-index": "35.49",
+    "rent-index": "10.99",
+    "cost-of-living-plus-rent-index": "23.78",
+    "groceries-index": "29.15",
+    "restaurant-price-index": "25.57",
+    "local-purchasing-power-index": "69.40"
+  },
+  {
+    "rank": "",
+    "country": "Tanzania",
+    "cost-of-living-index": "35.07",
+    "rent-index": "14.74",
+    "cost-of-living-plus-rent-index": "25.35",
+    "groceries-index": "29.04",
+    "restaurant-price-index": "24.40",
+    "local-purchasing-power-index": "20.64"
+  },
+  {
+    "rank": "",
+    "country": "Morocco",
+    "cost-of-living-index": "34.59",
+    "rent-index": "9.29",
+    "cost-of-living-plus-rent-index": "22.49",
+    "groceries-index": "30.30",
+    "restaurant-price-index": "23.94",
+    "local-purchasing-power-index": "39.40"
+  },
+  {
+    "rank": "",
+    "country": "Mongolia",
+    "cost-of-living-index": "34.43",
+    "rent-index": "9.68",
+    "cost-of-living-plus-rent-index": "22.60",
+    "groceries-index": "32.12",
+    "restaurant-price-index": "23.31",
+    "local-purchasing-power-index": "29.83"
+  },
+  {
+    "rank": "",
+    "country": "Mexico",
+    "cost-of-living-index": "34.29",
+    "rent-index": "10.85",
+    "cost-of-living-plus-rent-index": "23.08",
+    "groceries-index": "31.39",
+    "restaurant-price-index": "30.97",
+    "local-purchasing-power-index": "47.05"
+  },
+  {
+    "rank": "",
+    "country": "Bolivia",
+    "cost-of-living-index": "34.07",
+    "rent-index": "10.62",
+    "cost-of-living-plus-rent-index": "22.86",
+    "groceries-index": "26.75",
+    "restaurant-price-index": "26.64",
+    "local-purchasing-power-index": "44.74"
+  },
+  {
+    "rank": "",
+    "country": "Rwanda",
+    "cost-of-living-index": "34.01",
+    "rent-index": "9.73",
+    "cost-of-living-plus-rent-index": "22.40",
+    "groceries-index": "27.30",
+    "restaurant-price-index": "28.47",
+    "local-purchasing-power-index": "21.13"
+  },
+  {
+    "rank": "",
+    "country": "Paraguay",
+    "cost-of-living-index": "33.32",
+    "rent-index": "9.81",
+    "cost-of-living-plus-rent-index": "22.08",
+    "groceries-index": "26.88",
+    "restaurant-price-index": "27.50",
+    "local-purchasing-power-index": "35.23"
+  },
+  {
+    "rank": "",
+    "country": "Belarus",
+    "cost-of-living-index": "33.02",
+    "rent-index": "10.32",
+    "cost-of-living-plus-rent-index": "22.17",
+    "groceries-index": "27.78",
+    "restaurant-price-index": "34.27",
+    "local-purchasing-power-index": "42.92"
+  },
+  {
+    "rank": "",
+    "country": "Sri Lanka",
+    "cost-of-living-index": "32.95",
+    "rent-index": "6.83",
+    "cost-of-living-plus-rent-index": "20.46",
+    "groceries-index": "36.36",
+    "restaurant-price-index": "19.27",
+    "local-purchasing-power-index": "25.59"
+  },
+  {
+    "rank": "",
+    "country": "Armenia",
+    "cost-of-living-index": "32.70",
+    "rent-index": "10.56",
+    "cost-of-living-plus-rent-index": "22.11",
+    "groceries-index": "25.45",
+    "restaurant-price-index": "31.04",
+    "local-purchasing-power-index": "30.44"
+  },
+  {
+    "rank": "",
+    "country": "Moldova",
+    "cost-of-living-index": "32.63",
+    "rent-index": "7.90",
+    "cost-of-living-plus-rent-index": "20.81",
+    "groceries-index": "25.64",
+    "restaurant-price-index": "27.22",
+    "local-purchasing-power-index": "29.48"
+  },
+  {
+    "rank": "",
+    "country": "Bangladesh",
+    "cost-of-living-index": "32.62",
+    "rent-index": "5.18",
+    "cost-of-living-plus-rent-index": "19.50",
+    "groceries-index": "29.79",
+    "restaurant-price-index": "19.80",
+    "local-purchasing-power-index": "37.21"
+  },
+  {
+    "rank": "",
+    "country": "Macedonia",
+    "cost-of-living-index": "32.27",
+    "rent-index": "6.50",
+    "cost-of-living-plus-rent-index": "19.95",
+    "groceries-index": "24.98",
+    "restaurant-price-index": "24.49",
+    "local-purchasing-power-index": "40.16"
+  },
+  {
+    "rank": "",
+    "country": "Nigeria",
+    "cost-of-living-index": "31.75",
+    "rent-index": "21.59",
+    "cost-of-living-plus-rent-index": "26.89",
+    "groceries-index": "31.48",
+    "restaurant-price-index": "20.66",
+    "local-purchasing-power-index": "15.91"
+  },
+  {
+    "rank": "",
+    "country": "Uganda",
+    "cost-of-living-index": "31.72",
+    "rent-index": "10.02",
+    "cost-of-living-plus-rent-index": "21.35",
+    "groceries-index": "26.43",
+    "restaurant-price-index": "24.20",
+    "local-purchasing-power-index": "22.49"
+  },
+  {
+    "rank": "",
+    "country": "Ukraine",
+    "cost-of-living-index": "30.94",
+    "rent-index": "10.33",
+    "cost-of-living-plus-rent-index": "21.09",
+    "groceries-index": "24.09",
+    "restaurant-price-index": "23.98",
+    "local-purchasing-power-index": "33.14"
+  },
+  {
+    "rank": "",
+    "country": "Nepal",
+    "cost-of-living-index": "30.69",
+    "rent-index": "4.96",
+    "cost-of-living-plus-rent-index": "18.39",
+    "groceries-index": "26.47",
+    "restaurant-price-index": "20.27",
+    "local-purchasing-power-index": "24.15"
+  },
+  {
+    "rank": "",
+    "country": "Algeria",
+    "cost-of-living-index": "30.54",
+    "rent-index": "5.51",
+    "cost-of-living-plus-rent-index": "18.58",
+    "groceries-index": "31.31",
+    "restaurant-price-index": "16.46",
+    "local-purchasing-power-index": "31.97"
+  },
+  {
+    "rank": "",
+    "country": "Colombia",
+    "cost-of-living-index": "30.25",
+    "rent-index": "9.43",
+    "cost-of-living-plus-rent-index": "20.30",
+    "groceries-index": "24.39",
+    "restaurant-price-index": "22.33",
+    "local-purchasing-power-index": "34.55"
+  },
+  {
+    "rank": "",
+    "country": "Kazakhstan",
+    "cost-of-living-index": "30.06",
+    "rent-index": "9.51",
+    "cost-of-living-plus-rent-index": "20.24",
+    "groceries-index": "23.55",
+    "restaurant-price-index": "29.88",
+    "local-purchasing-power-index": "38.65"
+  },
+  {
+    "rank": "",
+    "country": "Azerbaijan",
+    "cost-of-living-index": "29.81",
+    "rent-index": "9.17",
+    "cost-of-living-plus-rent-index": "19.94",
+    "groceries-index": "23.34",
+    "restaurant-price-index": "31.40",
+    "local-purchasing-power-index": "28.48"
+  },
+  {
+    "rank": "",
+    "country": "Egypt",
+    "cost-of-living-index": "29.09",
+    "rent-index": "5.28",
+    "cost-of-living-plus-rent-index": "17.70",
+    "groceries-index": "25.08",
+    "restaurant-price-index": "24.24",
+    "local-purchasing-power-index": "23.27"
+  },
+  {
+    "rank": "",
+    "country": "Kyrgyzstan",
+    "cost-of-living-index": "28.13",
+    "rent-index": "8.96",
+    "cost-of-living-plus-rent-index": "18.97",
+    "groceries-index": "25.53",
+    "restaurant-price-index": "22.30",
+    "local-purchasing-power-index": "25.28"
+  },
+  {
+    "rank": "",
+    "country": "Georgia",
+    "cost-of-living-index": "27.78",
+    "rent-index": "9.30",
+    "cost-of-living-plus-rent-index": "18.94",
+    "groceries-index": "22.01",
+    "restaurant-price-index": "25.97",
+    "local-purchasing-power-index": "30.23"
+  },
+  {
+    "rank": "",
+    "country": "Kosovo (Disputed Territory)",
+    "cost-of-living-index": "27.38",
+    "rent-index": "8.72",
+    "cost-of-living-plus-rent-index": "18.46",
+    "groceries-index": "24.61",
+    "restaurant-price-index": "21.11",
+    "local-purchasing-power-index": "54.11"
+  },
+  {
+    "rank": "",
+    "country": "Venezuela",
+    "cost-of-living-index": "27.22",
+    "rent-index": "6.85",
+    "cost-of-living-plus-rent-index": "17.48",
+    "groceries-index": "29.59",
+    "restaurant-price-index": "22.31",
+    "local-purchasing-power-index": "2.79"
+  },
+  {
+    "rank": "",
+    "country": "Uzbekistan",
+    "cost-of-living-index": "25.79",
+    "rent-index": "7.82",
+    "cost-of-living-plus-rent-index": "17.20",
+    "groceries-index": "22.02",
+    "restaurant-price-index": "19.34",
+    "local-purchasing-power-index": "25.80"
+  },
+  {
+    "rank": "",
+    "country": "Tunisia",
+    "cost-of-living-index": "25.43",
+    "rent-index": "5.18",
+    "cost-of-living-plus-rent-index": "15.75",
+    "groceries-index": "23.45",
+    "restaurant-price-index": "14.05",
+    "local-purchasing-power-index": "37.63"
+  },
+  {
+    "rank": "",
+    "country": "Syria",
+    "cost-of-living-index": "25.31",
+    "rent-index": "5.44",
+    "cost-of-living-plus-rent-index": "15.81",
+    "groceries-index": "22.82",
+    "restaurant-price-index": "20.77",
+    "local-purchasing-power-index": "12.37"
+  },
+  {
+    "rank": "",
+    "country": "India",
+    "cost-of-living-index": "25.14",
+    "rent-index": "5.99",
+    "cost-of-living-plus-rent-index": "15.98",
+    "groceries-index": "25.16",
+    "restaurant-price-index": "17.51",
+    "local-purchasing-power-index": "61.73"
+  },
+  {
+    "rank": "",
+    "country": "Afghanistan",
+    "cost-of-living-index": "24.51",
+    "rent-index": "4.29",
+    "cost-of-living-plus-rent-index": "14.85",
+    "groceries-index": "18.83",
+    "restaurant-price-index": "17.12",
+    "local-purchasing-power-index": "28.87"
+  },
+  {
+    "rank": "",
+    "country": "Pakistan",
+    "cost-of-living-index": "18.58",
+    "rent-index": "4.02",
+    "cost-of-living-plus-rent-index": "11.62",
+    "groceries-index": "16.50",
+    "restaurant-price-index": "13.78",
+    "local-purchasing-power-index": "36.10"
+  }
+]
