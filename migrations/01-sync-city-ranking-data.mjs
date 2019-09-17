@@ -1,6 +1,6 @@
 import data from './data/city-rankings.json'
 
-import { Indices } from './utils/constants'
+import { Indices, Types } from './utils/constants'
 import { batch, collection } from './utils/firestore'
 
 import v from 'voca'
@@ -20,7 +20,7 @@ data
       {
         city,
         country,
-        type: 'city',
+        type: Types.CITY,
         i: toi(rest)
       }
     ])

@@ -1,6 +1,6 @@
 import data from './data/country-rankings.json'
 
-import { Indices } from './utils/constants'
+import { Indices, Types } from './utils/constants'
 import { batch, collection } from './utils/firestore'
 
 import v from 'voca'
@@ -16,11 +16,7 @@ data
   .map(
     ({ country, ...rest }) => ([
       v.kebabCase(country),
-      {
-        country,
-        type: 'coutnry',
-        i: toi(rest)
-      }
+      { country, type: Types.COUNTRY, i: toi(rest) }
     ])
   )
   .forEach(([ id, data ]) => {

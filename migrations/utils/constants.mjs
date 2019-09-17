@@ -4,3 +4,8 @@ export const Indices = [
   'groceries-index',
   'rent-index'
 ]
+
+export const Types = {
+  CITY: 'city',
+  COUNTRY: 'country'
+}
