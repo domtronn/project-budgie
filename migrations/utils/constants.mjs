@@ -1,6 +1,6 @@
 export const Indices = [
   'cost-of-living-index',
-  'restaurant-index',
+  'restaurant-price-index',
   'groceries-index',
   'rent-index'
 ]
