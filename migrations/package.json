@@ -2,7 +2,8 @@
   "name": "project-budgie-migrations",
   "description": "Firestore migrations for project budgie",
   "========== DOCS ==========": {
-    "": "Make sure you download the service account file to `./.serivce-account.json`"
+    "0": "Run migrations with `npm run migration 00-path-to-migration.mjs`",
+    "1": "Make sure you download the service account file to `./.serivce-account.json`"
   },
   "main": "index.js",
   "scripts": {
