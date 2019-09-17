@@ -7,7 +7,7 @@ import v from 'voca'
 import { pick, compose, map, join } from 'ramda'
 
 const toid = compose(join('-'), map(v.kebabCase))
-const toi = compose(map(Number), pick([ Indices ]))
+const toi = compose(map(Number), pick(Indices))
 
 const b = batch()
 const log = console.log.bind(console)

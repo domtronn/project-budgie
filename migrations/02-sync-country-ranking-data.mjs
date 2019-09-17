@@ -6,7 +6,7 @@ import { batch, collection } from './utils/firestore'
 import v from 'voca'
 import { pick, compose, map } from 'ramda'
 
-const toi = compose(map(Number), pick([ Indices ]))
+const toi = compose(map(Number), pick(Indices))
 
 const b = batch()
 const log = console.log.bind(console)
@@ -23,7 +23,7 @@ data
       }
     ])
   )
-  .forEach(([id, data]) => {
+  .forEach(([ id, data ]) => {
     log(`Syncing: ${id}`)
     b.set(collection('locations').doc(id), data)
   })
