@@ -1,30 +1,24 @@
-import data from './data/country-rankings.json'
+import fetchData from './data/fetch-rankings'
 
-import { Indices, Types } from './utils/constants'
 import { batch, collection } from './utils/firestore'
-
-import v from 'voca'
-import { pick, compose, map } from 'ramda'
-
-const toi = compose(map(Number), pick(Indices))
 
 const b = batch()
 const log = console.log.bind(console)
 
-/* Modify data and add to batch */
-data
-  .map(
-    ({ country, ...rest }) => ([
-      v.kebabCase(country),
-      { country, type: Types.COUNTRY, i: toi(rest) }
-    ])
-  )
-  .forEach(([ id, data ]) => {
+;(async () => {
+  const data = await fetchData('https://www.numbeo.com/cost-of-living/rankings_by_country.jsp')
+
+  /* Add data to batch */
+  data.forEach(({ id, ...data }) => {
     log(`Syncing: ${id}`)
-    b.set(collection('locations').doc(id), data)
+    b.set(
+      collection('locations').doc(id),
+      data
+    )
   })
 
-/* Commit batch */
-b
-  .commit()
-  .then(i => log(`Done! Synced ${data.length} items`))
+  // Commit batch
+  await b.commit()
+
+  log(`Done! Synced ${data.length} items`)
+})()
