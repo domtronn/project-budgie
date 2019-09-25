@@ -1,30 +1,64 @@
-const Tone = require('Tone')
-var synth = new Tone.PolySynth().toMaster()
+var synth = new Tone
+  .PolySynth()
+  .toMaster()
 
-Tone.Transport.bpm.value = 107
+Tone
+  .Transport
+  .bpm
+  .value = 127
 
-const play = (notes) => notes.reduce((acc, [ note, dur ]) => {
+const n = (t) => Tone.Time(`${t}n`)
+const d = (t) => n(t) + n(t * 2)
+const t = (...times) => times.reduce((acc, it) => n(it) + acc, 0)
+const play = (notes, start = '8n') => notes.reduce((acc, [ note, dur ]) => {
   synth.triggerAttackRelease(note, dur, acc)
   return acc + Tone.Time(dur)
-}, Tone.Time('8n'))
+}, Tone.Time(start))
 
 play([
-  ['E4', '8n'],
-  ['F4', '16n'],
-  ['G4', '8n'],
-  ['C5', '2n'],
-  ['D4', '8n'],
-  ['E4', '16n'],
-  ['F4', '1n'],
+  ['E4', d(8)],
+  ['F4', t(16)],
+  ['G4', t(8)],
+  ['C5', d(4) + t(4)],
 
-  ['G4', '8n'],
-  ['A4', '16n'],
-  ['B4', '8n'],
-  ['F5', '2n'],
+  ['D4', d(8)],
+  ['E4', t(16)],
+  ['F4', d(2)],
 
-  ['A4', '8n'],
-  ['B4', '16n'],
-  ['C5', '8n'],
-  ['D5', '8n'],
-  ['E5', '8n']
+  ['G4', d(8)],
+  ['A4', t(16)],
+  ['B4', t(8)],
+  ['F5', d(4) + t(4)],
+
+  ['A4', d(8)],
+  ['B4', t(16)],
+  ['C5', t(4)],
+  ['D5', t(4)],
+  ['E5', t(4)],
+
+  ['E4', d(8)],
+  ['F4', t(16)],
+  ['G4', t(8)],
+  ['C5', d(4) + t(4)],
+
+  ['D5', d(8)],
+  ['E5', t(16)],
+  ['F5', d(2)],
+
+  ['G4', d(8)],
+  ['G4', t(16)],
+  ['E5', t(4)],
+  ['D5', d(8)],
+
+  ['G4', t(16)],
+  ['E5', t(4)],
+  ['D5', d(8)],
+
+  ['G4', t(16)],
+  ['E5', t(4)],
+  ['D5', d(8)],
+
+  ['G4', t(16)],
+  ['E5', t(8)],
+  ['D5', t(8)]
 ])
