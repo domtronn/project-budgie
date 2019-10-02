@@ -12,6 +12,8 @@
   "author": "Dom Charlseworth <dgc336@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "csv-parse": "^4.4.7",
     "firebase-admin": "^8.5.0",
     "ramda": "^0.26.1",
     "tabletojson": "^1.0.4",
