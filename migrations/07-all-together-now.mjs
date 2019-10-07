@@ -2,35 +2,24 @@ import fetch from 'node-fetch'
 import currencies from './data/currency-symbols.json'
 import all from './data/final.json'
 
-import { reduce, find, match } from 'ramda'
+import { reduce, filter } from 'ramda'
 
-const addCurrency = (ind) => {
-  Object.values(currencies['symbols'])
-}
+import v from 'voca'
 
-const tap = (e) => {
-
-  // find(Object.values(currencies))
-  // currencies.fin
-  // console.log(e['country'])
-  return e['country']
-}
 
 (() => {
-  // console.log(all.map(tap))
-  all.map((fin) => {
+  const doesMatch = f => n => {
+    return v.matches(v.substring(n.name, 0, 5), v.substring(f.country, 0, 5), 'i')
+  };
 
-    return find((e) => {
-      if(e.name.match(/${fin.country}/i)) {
-        console.log('in here', e)
-        return e
-      } else {
-        console.log('no match', e.name)
-      }
-    }, Object.values(currencies))
-
+  const withCou = all.map((fin) => {
+    var match = filter(doesMatch(fin), Object.values(currencies))[0]
+    if(match) {
+      return {...fin, ...match }
+    } else {
+      {}
+    }
   })
 
-
-  // console.log(Object.values(currencies))
+  console.log(withCou)
 })()
