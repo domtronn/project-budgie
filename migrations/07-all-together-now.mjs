@@ -32,20 +32,21 @@ const getData = async () => {
     }
   })
 
-  allData.map((d) => {
-    b.set(
-      collection('locations').doc(d.country),
-      d
-    )
-  })
+  console.log(allData)
+  // allData.map((d) => {
+  //   b.set(
+  //     collection('locations').doc(d.country),
+  //     d
+  //   )
+  // })
 
-  log('this is b', b)
+  // log('this is b', b)
 
-  b.commit().then((r) => {
-    log('did it work?', r)
-  }).catch((err) => {
-    log('did it work? no!', err)
-  })
+  // b.commit().then((r) => {
+  //   log('did it work?', r)
+  // }).catch((err) => {
+  //   log('did it work? no!', err)
+  // })
 
 }
 
