@@ -1,7 +1,8 @@
 import v from 'voca'
 import t from 'tabletojson'
-import { map, compose, pick, join } from 'ramda'
+import { map, compose, pick } from 'ramda'
 
+import { id } from './build-id'
 import { mapToKeys } from '../utils'
 import { Types, Indices } from '../utils/constants'
 
@@ -9,7 +10,6 @@ const tabletojson = url => new Promise((resolve) => t.convertUrl(url, resolve))
 
 const keysToKebab = mapToKeys(v.kebabCase)
 const indexData = compose(map(Number), pick(Indices))
-const id = compose(join('-'), map(v.kebabCase), (...a) => a)
 
 const enrichData = ({ city = '', ...rest }) => {
   const [ c = '', _s = '', _c = '' ] = city.split(',')
