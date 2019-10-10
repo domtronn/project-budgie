@@ -20,7 +20,7 @@ const fetchLatLong = (buildUri) => async ({ id }) => {
   return { id, latitude, longitude }
 }
 
-export default async (items, buildUri) => {
+export default async (buildUri, items) => {
   const locData = await Promise.all(
     items.map(fetchLatLong(buildUri))
   )

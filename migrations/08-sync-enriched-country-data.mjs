@@ -1,59 +1,85 @@
 import fetchData from './data/fetch-rankings'
 import fetchLocation from './data/fetch-locations'
 import fetchLatLong from './data/fetch-lat-long'
+import fetchExchange from './data/fetch-exchange'
 import { fetchCodes, fetchSymbols } from './data/fetch-currency-codes'
 
 const log = console.log.bind(console)
-const enrichLocData = (countryData, locData) => countryData
-  .reduce(([locs, nocs], { id, ...data }) => {
-    return locData[id]
-      ? [locs.concat({ id, ...data, ...locData[id] }), nocs]
-      : [locs, nocs.concat({ id, ...data })]
-  }, [[], []])
+
+/**
+  * Fetch data and enrich a core data set
+  * @param {Function} fetch An async function that takes a url and a list of unfound data items
+  * @param {Function} find A function to be called on a core data item
+  * and list of enriched items to find enriched data
+  * @param {(string\|Function)} url The url to fetch data from
+  * @param {Object[][]} data a tuple of enriched and notfound data
+  *
+  * @returns {Object[][]} Returns a tuple of enriched and notfound data
+ */
+const fetchNenrich = ({ fetch, find }) => (url) => async ([ enriched, notfound ]) => {
+  const enrichmentData = await fetch(url, notfound)
+  const result = notfound.reduce(([ enriched, notfound ], item) => {
+    const found = find(item, enrichmentData)
+    return found
+      ? [ enriched.concat({ ...item, ...found }), notfound ]
+      : [ enriched, notfound.concat(item) ]
+  }, [ enriched, [] ])
+
+  return result
+}
+
+const chainEnrich = async (fs, data) => fs.reduce((acc, it) => acc.then(it), Promise.resolve([[], data]))
+const pivot = (fromtype) => async ([ enriched, notfound = [] ]) => {
+  if (notfound.length) log(`Unable to find ${fromtype} data for:`, notfound.map(_ => _.id))
+  log(`Finished enriching ${fromtype} data`)
+  return [ [], [...enriched, ...notfound] ]
+}
+
+const feLocation = fetchNenrich({ fetch: fetchLocation, find: ({ id }, l) => l[id] })
+const feLatLong = fetchNenrich({ fetch: fetchLatLong, find: ({ id }, l) => l[id] })
+const feCurrency = fetchNenrich({
+  fetch: fetchCodes,
+  find: ({ id } = {}, items) => {
+    const result = items.find(it => it.id === id) ||
+      items.find(it => it.id.includes(id) || id.includes(it.id))
+
+    if (!result) return
+
+    const { id: _, ...currency } = result
+    return { currency }
+  }
+})
+
+const feSymbols = fetchNenrich({
+  fetch: fetchSymbols,
+  find: ({ currency }, items) => {
+    if (!currency) return
+
+    const found = items.find(it => it.code === currency.id) ||
+          items.find(it => it.name.includes(currency.name) || currency.name.includes(it.name))
+
+    if (!found) return
+
+    return { currency: { ...currency, ...found } }
+  }
+})
 
 ;(async () => {
   const countryData = await fetchData('https://www.numbeo.com/cost-of-living/rankings_by_country.jsp')
 
-  // First pass of enriching location data
-  const p0LocData = await fetchLocation('https://developers.google.com/public-data/docs/canonical/countries_csv')
-  const [ p0Merged, p0Remaining ] = enrichLocData(countryData, p0LocData)
+  /* Enrich data with Lat / Long location */
+  const [ enriched ] = await chainEnrich([
+    feLocation('https://developers.google.com/public-data/docs/canonical/countries_csv'),
+    feLatLong(id => `https://google.com/search?q=${id.replace(/-/g, '+')}+latitude+longitude`),
+    feLatLong(id => `https://www.geodatos.net/en/coordinates/${id}`),
+    pivot('location'),
+    feCurrency('https://www.nationsonline.org/oneworld/currencies.htm'),
+    pivot('currency'),
+    feSymbols('https://justforex.com/education/currencies'),
+    pivot('symbols')
+  ], countryData)
 
-  // Second pass using Google answer box scraping
-  const p1LocData = await fetchLatLong(p0Remaining, id => `https://google.com/search?q=${id.replace(/-/g, '+')}+latitude+longitude`)
-  const [ p1Merged, p1Remaining ] = enrichLocData(p0Remaining, p1LocData)
+  log(enriched)
 
-  // Third pass using geodatos scraping
-  const p2LocData = await fetchLatLong(p1Remaining, id => `https://www.geodatos.net/en/coordinates/${id}`)
-  const [ p2Merged, notfound ] = enrichLocData(p1Remaining, p2LocData)
-
-  if (notfound.length) log(`Unable to find location data for the following:`, notfound)
-
-  const locEnriched = [
-    ...p0Merged,
-    ...p1Merged,
-    ...p2Merged
-  ]
-
-  // Enrich with Currency code
-  const currencyData = await fetchCodes('https://www.nationsonline.org/oneworld/currencies.htm')
-  const [ curEnriched, curNotfound ] = locEnriched.reduce(([curs, nurs], { id, ...data }) => {
-    let result = currencyData.find((it) => it.id === id)
-    if (!result) result = currencyData.find((it) => it.id.includes(id) || id.includes(it.id))
-    if (!result) return [ curs, nurs.concat({ id, ...data }) ]
-
-    const { id: _, ...currency } = result
-    return [ curs.concat({ id, ...data, currency }), nurs ]
-  }, [[], []])
-
-  if (curNotfound.length) log(`Unable to find currency data for the following:`, curNotfound.map(_ => _.country))
-
-  const currencySymbolData = await fetchSymbols('https://justforex.com/education/currencies')
-  const [ symbEnriced, symbNotfound ] = curEnriched.reduce(([symbs, nymbs], { currency, ...rest }) => {
-    let result = currencySymbolData.find((it) => currency.code === it.code)
-    if (!result) result = currencySymbolData.find((it) => it.name.includes(currency.name) || currency.name.includes(it.name))
-    return result
-      ? [ symbs.concat({ ...rest, currency: { ...currency, ...result } }), nymbs ]
-      : [ symbs, nymbs.concat({ currency, ...rest }) ]
-  }, [[], []])
-
+  // process.stdout.write(JSON.stringify(enriched, null, 2))
 })()
