@@ -44,10 +44,9 @@ const getDateAndSave = async (date) => {
 }
 
 const doIt = async () => {
-  // const start = new Date('2019-09-01')
-  const start = new Date()
+  const start = new Date('2019-10-02')
   const d = () => new Date(start.setDate(start.getDate() + 1)).toISOString().split('T')[0]
-  const dates = times(d, 31)
+  const dates = times(d, 15)
   const ps = map(getDateAndSave, dates)
   await Promise.all(ps)
   b.commit().then((r) => {
