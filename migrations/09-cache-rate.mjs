@@ -23,13 +23,13 @@ const getfromStore = async () => {
 }
 
 const saveToFirebase = async () => {
-  const data = await getfromStore()
-  const setting = map((code, rates) => {
+  const allRates = await getfromStore()
+  const setting = map(([code, rates]) => {
     return b.set(
       collection('rates').doc(code),
-      rates
+      {rates: rates}
     )
-  }, Object.entries(data))
+  }, Object.entries(allRates))
 
   await Promise.all(setting)
 
