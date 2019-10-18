@@ -10,6 +10,7 @@ export const initialize = () => {
 }
 
 export const firestore = () => initialize().firestore()
+export const database = () => initialize().database()
 
 export const batch = () => firestore().batch()
 export const collection = (name) => firestore().collection(name)
