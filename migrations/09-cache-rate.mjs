@@ -27,7 +27,7 @@ const saveToFirebase = async () => {
   const setting = map(([code, rates]) => {
     return b.set(
       collection('rates').doc(code),
-      {rates: rates}
+      {rates: rates, code: code}
     )
   }, Object.entries(allRates))
 
