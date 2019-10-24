@@ -17,8 +17,8 @@ const enrichData = ({ city = '', ...rest }) => {
   const country = _c ? _c.trim() : _s.trim()
 
   return city
-    ? { index: indexData(rest), type: Types.CITY, city: c.trim(), id: id(country, c), country }
-    : { index: indexData(rest), type: Types.COUNTRY, id: id(rest.country), country: rest.country }
+    ? { name: `${city}`, index: indexData(rest), type: Types.CITY, city: c.trim(), id: id(country, c), country }
+    : { name: `${rest.country}`, index: indexData(rest), type: Types.COUNTRY, id: id(rest.country), country: rest.country }
 }
 
 export default async (url) => {
