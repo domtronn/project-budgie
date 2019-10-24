@@ -8,8 +8,9 @@ import { Types, Indices } from '../utils/constants'
 
 const tabletojson = url => new Promise((resolve) => t.convertUrl(url, resolve))
 
-const keysToKebab = mapToKeys(v.kebabCase)
-const indexData = compose(map(Number), pick(Indices))
+const idFormat = v.camelCase
+const keysToKebab = mapToKeys(idFormat)
+const indexData = compose(map(Number), pick(map(idFormat, Indices)))
 
 const enrichData = ({ city = '', ...rest }) => {
   const [ c = '', _s = '', _c = '' ] = city.split(',')

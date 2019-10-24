@@ -1,10 +1,22 @@
+import parse from 'csv-parse/lib/sync'
+import fs from 'fs'
+import v from 'voca'
+
+import { batch, collection } from './utils/firestore'
+import merge from 'deepmerge'
+
 import fetchData from './data/fetch-rankings'
-import fetchLocation from './data/fetch-locations'
+import fetchCountryData from './data/fetch-country-data'
 import fetchLatLong from './data/fetch-lat-long'
-import fetchExchange from './data/fetch-exchange'
-import { fetchCodes, fetchSymbols } from './data/fetch-currency-codes'
 
 const log = console.log.bind(console)
+const chunk = (array = [], size) => {
+  const firstChunk = array.slice(0, size)
+  if (!firstChunk.length) {
+    return array
+  }
+  return [firstChunk].concat(chunk(array.slice(size, array.length), size))
+}
 
 /**
   * Fetch data and enrich a core data set
@@ -28,58 +40,95 @@ const fetchNenrich = ({ fetch, find }) => (url) => async ([ enriched, notfound ]
   return result
 }
 
-const chainEnrich = async (fs, data) => fs.reduce((acc, it) => acc.then(it), Promise.resolve([[], data]))
-const pivot = (fromtype) => async ([ enriched, notfound = [] ]) => {
-  if (notfound.length) log(`Unable to find ${fromtype} data for:`, notfound.map(_ => _.id))
-  log(`Finished enriching ${fromtype} data`)
-  return [ [], [...enriched, ...notfound] ]
+const syncToFirebase = async (data) => {
+  const b = batch()
+
+  data.forEach(({ id, ...data }) => {
+    log(`Syncing: ${id}`)
+    b.set(
+      collection('locations').doc(id),
+      data
+    )
+  })
+
+  // Commit batch
+  return b.commit()
 }
 
-const feLocation = fetchNenrich({ fetch: fetchLocation, find: ({ id }, l) => l[id] })
-const feLatLong = fetchNenrich({ fetch: fetchLatLong, find: ({ id }, l) => l[id] })
-const feCurrency = fetchNenrich({
-  fetch: fetchCodes,
-  find: ({ id } = {}, items) => {
-    const result = items.find(it => it.id === id) ||
-      items.find(it => it.id.includes(id) || id.includes(it.id))
+const chain = async (fs, data) => fs.reduce((acc, it) => acc.then(it), Promise.resolve(data))
+const chainEnrich = async (fs, data) => fs.reduce((acc, it) => acc.then(it), Promise.resolve([[], data]))
+const pivotNdrop = (fromtype) => async ([ enriched, notfound = [] ]) => {
+  if (notfound.length) {
+    log(`Unable to find ${fromtype} data for:`, notfound.map(_ => _.id))
+    log(`Dropping ${notfound.length} items`)
+  }
+  log(`Finished enriching ${fromtype} data`)
+  return [ [], enriched ]
+}
+
+const feLatLong = fetchNenrich({ fetch: fetchLatLong, find: ({ id }, l) => l[id] && { location: l[id] } })
+const feCitylocation = fetchNenrich({
+  fetch: (path) => parse(fs.readFileSync(path, 'utf-8'), { columns: true }),
+  find: ({ id, ...rest } = {}, items) => {
+    const result = items.find(({ cityascii, country }) => id === v.kebabCase(`${country} ${cityascii}`))
 
     if (!result) return
 
-    const { id: _, ...currency } = result
-    return { currency }
+    const { lat: latitude, lng: longitude } = result
+    return { id, location: { latitude, longitude }, ...rest }
   }
 })
 
-const feSymbols = fetchNenrich({
-  fetch: fetchSymbols,
-  find: ({ currency }, items) => {
-    if (!currency) return
+const stitchCities = fetchNenrich({
+  fetch: (data) => data,
+  find: ({ country, ...rest } = {}, items) => {
+    const result = items.find(it => it.country === country)
 
-    const found = items.find(it => it.code === currency.id) ||
-          items.find(it => it.name.includes(currency.name) || currency.name.includes(it.name))
+    if (!result) return
 
-    if (!found) return
+    return merge(result, rest)
+  }
+})
 
-    return { currency: { ...currency, ...found } }
+const n = i => i.replace(/-/g, '')
+const stichCountry = fetchNenrich({
+  fetch: fetchCountryData,
+  find: ({ id, ...rest } = {}, items) => {
+    const exact = items.find(it => it.id === id)
+    if (exact) return { ...exact, ...rest, id }
+
+    const partial = items.find(
+      it =>
+        n(it.id).includes(n(id)) ||
+        n(id).includes(n(it.id))
+    )
+    if (partial) return { ...partial, ...rest, id }
   }
 })
 
 ;(async () => {
   const countryData = await fetchData('https://www.numbeo.com/cost-of-living/rankings_by_country.jsp')
+  const cityData = await fetchData('https://www.numbeo.com/cost-of-living/rankings.jsp')
 
-  /* Enrich data with Lat / Long location */
-  const [ enriched ] = await chainEnrich([
-    feLocation('https://developers.google.com/public-data/docs/canonical/countries_csv'),
-    feLatLong(id => `https://google.com/search?q=${id.replace(/-/g, '+')}+latitude+longitude`),
-    feLatLong(id => `https://www.geodatos.net/en/coordinates/${id}`),
-    pivot('location'),
-    feCurrency('https://www.nationsonline.org/oneworld/currencies.htm'),
-    pivot('currency'),
-    feSymbols('https://justforex.com/education/currencies'),
-    pivot('symbols')
+  const [ , enriched ] = await chainEnrich([
+    stichCountry('https://restcountries.eu/rest/v2/all'),
+    pivotNdrop('country')
   ], countryData)
 
-  log(enriched)
+  const [ , cities ] = await chainEnrich([
+    feCitylocation('./data/worldcities.csv'),
+    feLatLong(id => `https://google.com/search?q=${id.replace(/-/g, '+')}+latitude+longitude`),
+    pivotNdrop('city location'),
+    stitchCities(enriched),
+    pivotNdrop('country')
+  ], cityData)
 
-  // process.stdout.write(JSON.stringify(enriched, null, 2))
+  const data = enriched.concat(cities)
+  const chunkedData = chunk(data, 500)
+
+  /* Add data to batch */
+  // process.stdout.write(JSON.stringify(chunkedData, null, 2))
+  await chain(chunkedData.map(d => syncToFirebase.bind({}, d)))
+
+  log(`Done! Synced ${data.length} items`)
 })()
